@@ -57,7 +57,8 @@ extern crate alloc;
 #[doc(no_inline)]
 pub use alloc::{boxed, format, string, vec};
 
-// Provide HashMap through hashbrown for no_std environment
+// Provide HashMap through hashbrown for no_std environment (only when alloc is enabled)
+#[cfg(feature = "alloc")]
 pub mod collections {
     pub use hashbrown::HashMap;
 }
