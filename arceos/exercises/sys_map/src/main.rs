@@ -3,6 +3,7 @@
 
 #[cfg(feature = "axstd")]
 extern crate axstd as std;
+#[macro_use]
 extern crate alloc;
 
 #[macro_use]
